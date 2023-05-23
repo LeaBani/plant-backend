@@ -21,8 +21,26 @@ async function main() {
   //  },
   // })
 
-  const allUsers = await prisma.user.findMany();
-  console.dir(allUsers, { depth: null })
+  // const allUsers = await prisma.user.findMany();
+  // console.dir(allUsers, { depth: null })
+
+  // categories 
+  
+  // await prisma.category.create({
+  // data: {
+  //       name: 'plante d\'extérieur',
+  //  },
+  // })
+  
+  const deletedUser = await prisma.category.delete({
+    where: { id: 1 },
+  })
+
+  const allCategories = await prisma.category.findMany();
+  console.dir(allCategories, { depth: null })
+  
+
+
 }
 
 main()
