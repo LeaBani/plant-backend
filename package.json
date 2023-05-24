@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "migrate": "prisma migrate dev",
-    "update": "npx ts-node index.ts",
+    "update": "npx ts-node prisma/index.ts",
     "view": "npx prisma studio"
   },
   "keywords": [],

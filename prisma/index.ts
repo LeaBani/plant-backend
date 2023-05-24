@@ -31,16 +31,16 @@ async function main() {
   //       name: 'plante d\'extérieur',
   //  },
   // })
+
+  // delete one user by id
   
-  const deletedUser = await prisma.category.delete({
-    where: { id: 1 },
-  })
+  // const deletedUser = await prisma.category.delete({
+  //   where: { id: 1 },
+  // })
 
   const allCategories = await prisma.category.findMany();
   console.dir(allCategories, { depth: null })
   
-
-
 }
 
 main()
